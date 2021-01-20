@@ -20,7 +20,7 @@
     /* borders */
     --global-border-radius: 7px;
 
-    /* --global-transition: cubic-bezier(0.22, 0.61, 0.36, 1); */
+    /* --global-transition: cubic-bezier(0.780, 0.000, 0.230, 1.000); */
     --global-transition: ease-in-out;
 
    /* Baseline settings */
@@ -419,12 +419,12 @@ input:disabled {
 
     overflow: hidden;
 
-    transition: all 0.2s var(--global-transition);
+    transition: background-color 0.15s var(--global-transition);
 }
 
 .c-button-name {
     color: #000;
-    transition: color 0.2s var(--global-transition);
+    transition: color 0.15s var(--global-transition);
 }
 
 .c-button:active {
