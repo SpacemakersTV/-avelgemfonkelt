@@ -10,7 +10,7 @@
     /* colors */
     --global-color-background: #000000;
     --global-font-color: #ffffff;
-    --button-overlay-color:#000000; 
+    --button-overlay-color: #000000;
 
     /* fonts */
     --global-font-size: 1rem;
@@ -23,16 +23,23 @@
     /* --global-transition: cubic-bezier(0.780, 0.000, 0.230, 1.000); */
     --global-transition: ease-in-out;
 
-   /* Baseline settings */
-   --global-baseline: 8px;         
-   --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+    /* Baseline settings */
+    --global-baseline: 8px;
+    --global-whitespace: calc(var(--global-baseline) * 3);
+    /* = 24px */
 
-   --global-whitespace-xs: calc(var(--global-baseline) * .5); /* = 4px */
-   --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
-   --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
-   --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
-   --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
-   --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+    --global-whitespace-xs: calc(var(--global-baseline) * .5);
+    /* = 4px */
+    --global-whitespace-sm: calc(var(--global-baseline) * 1);
+    /*  = 8px */
+    --global-whitespace-md: calc(var(--global-baseline) * 2);
+    /*  = 16px */
+    --global-whitespace-lg: calc(var(--global-baseline) * 4);
+    /*  = 32px */
+    --global-whitespace-xl: calc(var(--global-whitespace) * 2);
+    /*  = 48px */
+    --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
+    /*  = 72px */
 }
 
 /*------------------------------------*\
@@ -46,9 +53,9 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: var(--global-font-size);
     line-height: 1.5;
-    font-family: sans-serif;
+    font-family: "Helvetica", sans-serif;
     color: var(--global-font-color);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -265,7 +272,8 @@ input:disabled {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -279,7 +287,7 @@ input:disabled {
     position: relative;
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: 8px;
 }
 
@@ -345,12 +353,12 @@ input:disabled {
 \*------------------------------------*/
 
 .c-background {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .c-main-content {
@@ -368,7 +376,7 @@ input:disabled {
 .c-header {
     display: flex;
     width: 100%;
-    padding-top: var(--global-whitespace-md);
+    padding-top: var(--global-whitespace-lg);
     padding-left: var(--global-whitespace-sm);
     display: flex;
     position: sticky;
@@ -422,7 +430,15 @@ input:disabled {
     transition: background-color 0.15s var(--global-transition);
 }
 
+.c-button-img {
+    height: 100%;
+    width: 100%;
+}
+
+
 .c-button-name {
+    position: absolute;
+    font-weight: 600;
     color: #000;
     transition: color 0.15s var(--global-transition);
 }
@@ -431,9 +447,30 @@ input:disabled {
     background-color: #000;
 }
 
-.c-button:active .c-button-name{
+.c-button:active .c-button-name {
     color: #FFF;
 }
+
+.c-footer {
+    background-color: #000;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
@@ -513,6 +550,7 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
+
     *,
     *:before,
     *:after {
@@ -523,16 +561,20 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
+
     /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
@@ -541,14 +583,17 @@ No media query since this is the default in mobile first design
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -556,16 +601,19 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;

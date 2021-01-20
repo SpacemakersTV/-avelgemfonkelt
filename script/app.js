@@ -22,7 +22,7 @@ const postMessage = function(chan) {
                 'Content-Type': 'application/json'
             }
         }).then(res => res.json())
-        .then(response => console.log('Success:', JSON.stringify(response)))
+        .then(response => console.log('Success:', response))
         .catch(error => console.error('Error:', error));
 }
 
