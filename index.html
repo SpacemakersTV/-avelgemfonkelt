@@ -1,58 +1,66 @@
-<html> 
-  <head>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <title>Hello World</title> 
-  </head>
- 
-  <body> 
-    <div class="head">
-      <div>
-        <img src="img/947137_845058178885618_4064697285895384542_n.png" alt="logo-spacemakers" height="100">
-      </div>
-      <h1>#AvelgemFonkelt</h1>
-      <h2>by SPACEMAKERS</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avelgem Fonkelt - Charme</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js" integrity="sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==" crossorigin="anonymous"></script>
+    <script src="script/background.js"></script>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+
+    <div id="canvas" class="c-background"></div>
+
+    <div class="c-main-content">
+        <div class="c-header">
+            <img src="img/logo_spcmkrs_w_on_b.png" alt="Logo Spacemakers" class="c-header-logo">
+            <div class="c-header-title__container">
+                <h1 class="c-header-title">#AvelgemFonkelt</h1>
+                <h2 class="c-header-title__footer">By Spacemakers</h2>
+            </div>           
+        </div>
+
+        <div class="c-buttons-container">
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Waves</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Lines</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Waterfall</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Strobo</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Digiridoo</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Portal to hell</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Steek et in de fik</p>
+            </button>
+
+            <button class="o-button-reset c-button js-button" midi-chan="60">
+                <p class="c-button-name">Spacemakers</p>
+            </button>
+        </div>
+
+        <div class="c-footer">
+            
+        </div>
     </div>
-    <div class="main">
-      <div class="container">
-        <div class="item">
-          <img id="1" src="img/1.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="2" src="img/2.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="3" src="img/3.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="4" src="img/4.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="5" src="img/5.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="6" src="img/6.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="7" src="img/7.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-        <div class="item">
-          <img id="8" src="img/8.svg" alt="logo-spacemakers" height="300rem" onclick="post(this.id)">
-        </div>
-      </div>
-    </div>
-    <div class="foot">
-      <div class="socials">
-        <p>insta</p>
-        <p>facebook</p>
-        <p>site</p>
-      </div>
-      <h3>
-        #AvelgemFonkelt
-      </h3>
-      <div class="logo">
-        <p>logo krak</p>
-      </div>
-    </div>
-  </body>
+</body>
 </html>
