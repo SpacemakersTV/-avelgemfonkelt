@@ -366,6 +366,8 @@ input:disabled {
 */
 
 .c-header {
+    display: flex;
+    width: 100%;
     padding-top: var(--global-whitespace-md);
     padding-left: var(--global-whitespace-sm);
     display: flex;
@@ -380,11 +382,12 @@ input:disabled {
 
 
 .c-header-title__container {
+    width: 100%;
     margin-top: var(--global-whitespace-md);
 }
 
 .c-header-title__footer {
-    margin-left: 110px;
+    margin-left: 35%;
     margin-top: 0 !important;
 }
 
